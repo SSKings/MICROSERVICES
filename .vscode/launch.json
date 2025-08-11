@@ -1,0 +1,68 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "EurekaServerApplication",
+            "request": "launch",
+            "mainClass": "com.sskings.eureka_server.EurekaServerApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "CardMsApplication",
+            "request": "launch",
+            "mainClass": "com.sskings.card_ms.CardMsApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "CloudGatewayMsApplication",
+            "request": "launch",
+            "mainClass": "com.sskings.cloud_gateway_ms.CloudGatewayMsApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EurekaServerApplication<eureka-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.sskings.eureka_server.EurekaServerApplication",
+            "projectName": "eureka-server",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=42597 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=eureka-server"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ClientMsApplication<client-ms>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.sskings.client_ms.ClientMsApplication",
+            "projectName": "client-ms",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=44637 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=client-ms"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CloudGatewayMsApplication<cloud-gateway-ms>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.sskings.cloud_gateway_ms.CloudGatewayMsApplication",
+            "projectName": "cloud-gateway-ms",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=42737 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=cloud-gateway-ms"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CardMsApplication<card-ms>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.sskings.card_ms.CardMsApplication",
+            "projectName": "card-ms",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

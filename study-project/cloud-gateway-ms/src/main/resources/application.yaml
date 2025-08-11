@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: cloud-gateway-ms
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: client-service
+          uri: lb://client-ms
+          predicates:
+            - Path=/clients/** 
+        - id: card-service
+          uri: lb://card-ms
+          predicates:
+            - Path=/cards/**
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_DFZONE:http://localhost:8761/eureka/}
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
